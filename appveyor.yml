@@ -12,12 +12,12 @@ configuration: Release
 before_build:
   - ps: Import-Module .\build\psake.psm1
 build_script:
-  - ps: Invoke-Psake .\build\build.ps1 -properties @{"Configuration"=$env:CONFIGURATION}
+  - ps: Invoke-Psake .\build\build.ps1 -properties @{"Configuration"=$env:CONFIGURATION;"Version"=$env:APPVEYOR_BUILD_VERSION;"$UpdatePackageVersion="$True"}
 test: off
 artifacts:
-  - path: 'artifacts\*.nupkg'
-deploy:
-- provider: NuGet
-  api_key:
-    secure: 4eGPThK/wSpRmfINQgAGQZD/e8r6FKRfp0SN4nB5/FBTHKJ1xIf/BK3/Iz5csDFm
-  artifact: /.*\.nupkg/
+  - path: 'build\artifacts\*.nupkg'
+#deploy:
+#- provider: NuGet
+#  api_key:
+#    secure: 4eGPThK/wSpRmfINQgAGQZD/e8r6FKRfp0SN4nB5/FBTHKJ1xIf/BK3/Iz5csDFm
+#  artifact: /.*\.nupkg/
