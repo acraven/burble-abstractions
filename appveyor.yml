@@ -12,7 +12,7 @@ configuration: Release
 before_build:
   - ps: Import-Module .\build\psake.psm1
 build_script:
-  - ps: Invoke-Psake .\build\build.ps1 -properties @{"Configuration"=$env:CONFIGURATION;"Version"=$env:APPVEYOR_BUILD_VERSION;"$UpdatePackageVersion="$True"}
+  - ps: Invoke-Psake .\build\build.ps1 -properties @{"Configuration"=$env:CONFIGURATION;"Version"=$env:APPVEYOR_BUILD_VERSION;"$UpdatePackageVersion"="$True"}
 test: off
 artifacts:
   - path: 'build\artifacts\*.nupkg'
