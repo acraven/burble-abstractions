@@ -1,6 +1,5 @@
 properties {
-   $Version = "0.0.1"
-   $UpdatePackageVersion = $False
+   $Version = $null
    $BasePath = Resolve-Path ..
    $SrcPath = "$BasePath\src"
    $ArtifactsPath = "$BasePath\build\artifacts"
@@ -20,10 +19,7 @@ task Clean {
 }
 
 task Build {
-   if ($UpdatePackageVersion)
-   {
-      Update-Project $ProjectJsonPath $Version
-   }
+   Update-Project $ProjectJsonPath $Version
 
    exec { dotnet --version }
    exec { dotnet restore $ProjectJsonPath }
@@ -40,6 +36,11 @@ task Package -depends Build {
 
 function Update-Project ([string]$projectPath, [string]$version)
 {
+   if ($version -eq $null -or $version -eq "")
+   {
+      return
+   }
+	
    $json = (Get-Content $projectPath) -join "`n" | ConvertFrom-Json
    
    $json.version = $version
