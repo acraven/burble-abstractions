@@ -2,7 +2,7 @@ properties {
    $Version = $null
    $BasePath = Resolve-Path ..
    $SrcPath = "$BasePath\src"
-   $ArtifactsPath = "$BasePath\build\artifacts"
+   $ArtifactsPath = "$BasePath\artifacts"
    $ProjectJsonPath = "$SrcPath\Burble.Abstractions\project.json"
    $Configuration = if ($Configuration) {$Configuration} else { "Debug" }
 }
