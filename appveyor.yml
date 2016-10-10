@@ -1,0 +1,12 @@
+version: 0.0.{build}
+skip_tags: true
+clone_depth: 1
+cache: C:\Users\appveyor\.nuget\packages
+configuration: Release
+before_build:
+  - ps: Import-Module .\build\psake.psm1
+build_script:
+  - ps: Invoke-Psake .\build\build.ps1 -properties @{"Configuration"=$env:CONFIGURATION}
+test: off
+artifacts:
+  - path: 'artifacts\*.nupkg'

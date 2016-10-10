@@ -1,6 +1,16 @@
 ﻿{
    "version": "1.0.0-*",
-
+   "title": "Burble.Abstractions",
+   "description": "HTTP API library",
+   "authors": [ "Andrew Craven" ],
+   "packOptions": {
+      "tags": [ "http", "api" ],
+      "licenseUrl": "https://github.com/acraven/burble-abstractions/blob/master/LICENSE",
+      "repository": {
+         "type": "git",
+         "url": "git://github.com/acraven/burble-abstractions"
+      }
+   },
    "frameworks": {
       "netstandard1.6": {
          "dependencies": {
@@ -10,6 +20,7 @@
       },
       "net45": {
          "frameworkAssemblies": {
+            "System.Net.Http": ""
          }
       }
    }
