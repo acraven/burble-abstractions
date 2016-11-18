@@ -2,6 +2,7 @@ namespace Burble.Abstractions
 {
    using System;
    using System.Collections.Generic;
+   using System.Net.Http;
 
    public interface IHttpClientEvent
    {
@@ -13,6 +14,8 @@ namespace Burble.Abstractions
 
       string Method { get; }
 
-      IDictionary<string, object> Tags { get; set; }
+      IDictionary<string, object> Tags { get; }
+
+      HttpRequestMessage Request { get; }
    }
 }
