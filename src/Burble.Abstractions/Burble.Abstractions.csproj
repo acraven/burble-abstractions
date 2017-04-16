@@ -3,7 +3,6 @@
   <PropertyGroup>
     <Description>HTTP API library</Description>
     <AssemblyTitle>Burble.Abstractions</AssemblyTitle>
-    <VersionPrefix>0.0.13</VersionPrefix>
     <Authors>Andrew Craven</Authors>
     <TargetFrameworks>netstandard1.6;net451</TargetFrameworks>
     <AssemblyName>Burble.Abstractions</AssemblyName>
@@ -20,7 +19,8 @@
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-    <Version>0.0.14</Version>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <VersionPrefix>0.0.14</VersionPrefix>
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
