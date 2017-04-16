@@ -8,7 +8,7 @@
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Epworth Consulting Ltd.")]
 [assembly: AssemblyProduct("Burble")]
-[assembly: AssemblyCopyright("© Andrew Craven 2016")]
+[assembly: AssemblyCopyright("© Andrew Craven 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
