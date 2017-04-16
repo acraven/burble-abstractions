@@ -3,8 +3,8 @@ properties {
    $BasePath = Resolve-Path ..
    $SrcPath = "$BasePath\src"
    $ArtifactsPath = "$BasePath\artifacts"
-   $ProjectJsonPath = "$SrcPath\Burble.Abstractions\project.json"
-#   $TestProjectJsonPath = "$SrcPath\Burble.Abstractions.Tests\project.json"
+   $ProjectJsonPath = "$SrcPath\Burble.Abstractions\Burble.Abstractions.csproj"
+#   $TestProjectJsonPath = "$SrcPath\Burble.Abstractions.Tests\Burble.Abstractions.Tests.csproj"
    $Configuration = if ($Configuration) {$Configuration} else { "Debug" }
 }
 
