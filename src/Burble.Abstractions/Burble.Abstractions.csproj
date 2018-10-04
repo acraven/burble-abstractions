@@ -1,37 +1,29 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <TargetFrameworks>net451;netstandard2.0</TargetFrameworks>
+    <Product>Burble.Abstractions</Product>
+    <Title>Burble.Abstractions</Title>
     <Description>HTTP API library</Description>
-    <AssemblyTitle>Burble.Abstractions</AssemblyTitle>
     <Authors>Andrew Craven</Authors>
-    <TargetFrameworks>netstandard1.6;net451</TargetFrameworks>
+    <RootNamespace>Burble.Abstractions</RootNamespace>
     <AssemblyName>Burble.Abstractions</AssemblyName>
+    <VersionPrefix>0.0.16</VersionPrefix>
+    <VersionSuffix></VersionSuffix>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
     <PackageId>Burble.Abstractions</PackageId>
     <PackageTags>http;api</PackageTags>
     <PackageLicenseUrl>https://github.com/acraven/burble-abstractions/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>git://github.com/acraven/burble-abstractions</RepositoryUrl>
-    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
-    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
-    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
-    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
-    <VersionPrefix>0.0.15</VersionPrefix>
   </PropertyGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.6' ">
-    <PackageReference Include="System.Net.Http" Version="4.3.0" />
+  <ItemGroup Condition="'$(TargetFramework)' == 'net451'">
+    <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Net.Http" Version="4.3.3" />
     <PackageReference Include="System.Runtime" Version="4.3.0" />
   </ItemGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-
 </Project>
