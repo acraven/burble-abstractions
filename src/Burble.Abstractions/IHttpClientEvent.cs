@@ -1,20 +1,12 @@
+using System.Net.Http;
+
 namespace Burble.Abstractions
 {
-   using System;
-   using System.Collections.Generic;
-   using System.Net.Http;
-
-   public interface IHttpClientEvent
+   public interface IHttpClientEvent : IEvent
    {
-      string EventType { get; }
-
-      DateTimeOffset Timestamp { get; }
-
       string Uri { get; }
 
       string Method { get; }
-
-      IDictionary<string, object> Tags { get; }
 
       HttpRequestMessage Request { get; }
    }

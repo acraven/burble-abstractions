@@ -1,8 +1,8 @@
-﻿namespace Burble.Abstractions
-{
-   using System;
-   using System.Net.Http;
+﻿using System;
+using System.Net.Http;
 
+namespace Burble.Abstractions.Exceptions
+{
    public class HttpClientServerUnavailableException : Exception
    {
       public HttpClientServerUnavailableException(HttpMethod method, Uri requestUri)

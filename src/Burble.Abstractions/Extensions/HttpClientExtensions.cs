@@ -1,10 +1,10 @@
-﻿namespace Burble.Abstractions
-{
-   using System.Net.Http;
-   using System.Threading;
-   using System.Threading.Tasks;
+﻿using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
 
-   public static class HttpContextExtensions
+namespace Burble.Abstractions.Extensions
+{
+   public static class HttpClientExtensions
    {
       public static Task<HttpResponseMessage> SendAsync(
          this IHttpClient httpClient,
