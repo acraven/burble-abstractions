@@ -3,8 +3,7 @@ properties {
    $BasePath = Resolve-Path ..
    $SrcPath = "$BasePath\src"
    $ArtifactsPath = "$BasePath\artifacts"
-   $ProjectPath = "$SrcPath\Burble.Abstractions\Burble.Abstractions.csproj"
-#   $TestProjectPath = "$SrcPath\Burble.Abstractions.Tests\Burble.Abstractions.Tests.csproj"
+   $ProjectPath = "$SrcPath\Grouchy.HttpApi.Client.Abstractions\Grouchy.HttpApi.Client.Abstractions.csproj"
    $Configuration = if ($Configuration) {$Configuration} else { "Debug" }
 }
 
@@ -31,12 +30,6 @@ task Build {
       exec { dotnet build $ProjectPath -c $Configuration -f netstandard2.0 --no-incremental --version-suffix $VersionSuffix }
       exec { dotnet build $ProjectPath -c $Configuration -f net451 --no-incremental --version-suffix $VersionSuffix }
    }
-}
-
-task Test -depends Build {
-#   exec { dotnet restore $TestProjectPath }
-#   exec { dotnet test $TestProjectPath -c $Configuration -f netcoreapp2.0 }
-#   exec { dotnet test $TestProjectPath -c $Configuration -f net451 }
 }
 
 task Package -depends Build {
