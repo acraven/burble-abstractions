@@ -7,7 +7,7 @@ properties {
    $Configuration = if ($Configuration) {$Configuration} else { "Debug" }
 }
 
-task default -depends Clean, Build, Test, Package
+task default -depends Clean, Build, Package
 
 task Clean {
    if (Test-Path -path $ArtifactsPath)
