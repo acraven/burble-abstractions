@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Burble.Abstractions", "src\Burble.Abstractions\Burble.Abstractions.csproj", "{2D7E1876-2FB0-4449-A093-21044BB6CF3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Grouchy.HttpApi.Client.Abstractions", "src\Grouchy.HttpApi.Client.Abstractions\Grouchy.HttpApi.Client.Abstractions.csproj", "{2D7E1876-2FB0-4449-A093-21044BB6CF3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,6 @@
-﻿using Burble.Abstractions.Configuration;
+﻿using Grouchy.HttpApi.Client.Abstractions.Configuration;
 
-namespace Burble.Abstractions
+namespace Grouchy.HttpApi.Client.Abstractions
 {
     public interface IHttpClientRegistry
     {

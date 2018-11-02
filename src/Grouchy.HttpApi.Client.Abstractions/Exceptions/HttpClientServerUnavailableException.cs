@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 
-namespace Burble.Abstractions.Exceptions
+namespace Grouchy.HttpApi.Client.Abstractions.Exceptions
 {
    public class HttpClientServerUnavailableException : Exception
    {

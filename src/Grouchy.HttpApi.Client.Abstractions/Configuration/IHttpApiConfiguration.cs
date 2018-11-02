@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Burble.Abstractions.Configuration
+namespace Grouchy.HttpApi.Client.Abstractions.Configuration
 {
     public interface IHttpApiConfiguration
     {

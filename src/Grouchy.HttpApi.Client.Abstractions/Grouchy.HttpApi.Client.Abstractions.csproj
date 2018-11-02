@@ -1,22 +1,22 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net451;netstandard2.0</TargetFrameworks>
-    <Product>Burble.Abstractions</Product>
-    <Title>Burble.Abstractions</Title>
+    <Product>Grouchy.HttpApi.Client.Abstractions</Product>
+    <Title>Grouchy.HttpApi.Client.Abstractions</Title>
     <Description>HTTP API library</Description>
     <Authors>Andrew Craven</Authors>
-    <RootNamespace>Burble.Abstractions</RootNamespace>
-    <AssemblyName>Burble.Abstractions</AssemblyName>
-    <VersionPrefix>0.0.16</VersionPrefix>
+    <RootNamespace>Grouchy.HttpApi.Client.Abstractions</RootNamespace>
+    <AssemblyName>Grouchy.HttpApi.Client.Abstractions</AssemblyName>
+    <VersionPrefix>0.0.1</VersionPrefix>
     <VersionSuffix></VersionSuffix>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
-    <PackageId>Burble.Abstractions</PackageId>
+    <PackageId>Grouchy.HttpApi.Client.Abstractions</PackageId>
     <PackageTags>http;api</PackageTags>
-    <PackageLicenseUrl>https://github.com/acraven/burble-abstractions/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/grouchy-tools/grouchy.httpapi.client.abstractions/blob/master/LICENSE</PackageLicenseUrl>
     <RepositoryType>git</RepositoryType>
-    <RepositoryUrl>git://github.com/acraven/burble-abstractions</RepositoryUrl>
+    <RepositoryUrl>git://github.com/grouchy-tools/grouchy.httpapi.client.abstractions</RepositoryUrl>
   </PropertyGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'net451'">
     <Reference Include="System" />

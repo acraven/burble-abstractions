@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Burble.Abstractions
+namespace Grouchy.HttpApi.Client.Abstractions
 {
    public interface IHttpClient
    {

@@ -1,4 +1,4 @@
-﻿namespace Burble.Abstractions
+﻿namespace Grouchy.HttpApi.Client.Abstractions
 {
    public interface IHttpClientEventCallback
    {
